@@ -1,0 +1,33 @@
+Difference between http 1.1 and http 2
+
+HTTP 1.1
+ 
+HTTP protocol was developed in 1989 as a common language that enables client and server machines's interaction.
+Process : The client has to send a request to the server using the method(GET/POST)
+Delivery modes : HTTP 1.1 sends messages as plain text.
+Multiplexing : HTTP 1.1 loads resources one after the other, so if one resource cannot be loaded, 
+               it blocks all the other resources behind it.
+Compression : HTTP 1.1 uses formats like gzip to compress the data trasferred in the messages. 
+              Though the header itself is small, it gets larger due to the use of cookies or an increased
+              number of request.
+Advantage : Multiple domain names can use the same IP address.
+            It supports Pipelining, we can send multiple outstanding requests but the responses are still serialized.
+
+Disadvantage : Limited to processing only one request for a single TCP connection.
+
+
+
+
+
+HTTP 2
+
+HTTP 2 was released at Google as the significant improvement of its predecessor.
+Delivery modes : HTTP 2 encodes them into binary data and arranges them carefully.
+Multiplexing : HTTP 2 is able to use a single TCP connection to send multiple streams of data at once 
+               so that no one resource blocks any other resource.
+Compression : HTTP 2 uses HPACK compression to decrease the average size of the header.
+              In addition, HPACK keeps track of previously transferred header values and further compresses 
+               them as per a dynamically modified index shared between client and server.
+Advantage :   All the modern browsers support HTTP 2 over HTTPS with SSL certificate installation.
+Disadvantage : For the client machines operating on a slow network, data packets drop bit by bit and the network 
+                quality gets degraded to a single HTTP 2 connection.

@@ -1,0 +1,22 @@
+Object and its internal representation..
+
+Object..
+
+Meaning    :  An Object is a collection of properties, and a property is an association between a name and a value.
+A property's value can be a function, in which case the property is known as a method.
+Object in Javascript, just as in many other programming languages, can be compared to objects in real life.
+
+Definition : Objects in Javascript may be defined as an unordered collection of related data, of primitive or 
+             reference types, in the form of "key:value" pairs. These keys can be variables or functions and are
+             called properties and methods, respectively, in the context of an object.
+
+           
+           Objects internal representation:
+	 
+	1. Generally, an object is accompanied by a class that defines an object's blueprint and consists of collection of properties, methods,etc
+	2. Firstly, we create a class with a class name 
+	3. Next, we create an object by writing the new keyword and assign a reference variable for it to access
+	4. We initialize a javascript object by using constructor 
+	5. this keyword is used inside the constructor to print the freshly created object value
+	6. And, we write the values for the constructor parameter and initialize the objects field
+        7. Finally, the constructor call is made and the values get printed  
